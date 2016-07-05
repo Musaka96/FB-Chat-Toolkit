@@ -2,7 +2,10 @@ import fbchat
 
 def login():
 
+	username = input("Enter your id --> ")
+	password = input("Enter your password --> ")
 	try:	
+		client = fbchat.Client(username, password)
 	except:
 		print("id or password is wrong")
 		login()
